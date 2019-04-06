@@ -1,0 +1,15 @@
+{% extends 'register/layout.html' %}
+
+{% block navbar %}
+            <div class="row-nav">
+                    <div class="col-lg-12">
+                        <div class="navbar">
+                            <ul class="nav nav-pills nav-justified">
+                                {% for nav_title in navs %}
+                                <li class ="nav-item"><a class="nav-link" href="{{ nav_title.link }}">{{ nav_title.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+{% endblock %}

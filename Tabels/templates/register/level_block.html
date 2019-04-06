@@ -1,0 +1,90 @@
+{%  extends 'register/layout.html' %}
+
+
+{% block knight %}
+    <h4> Knights</h4>
+                    <ul class="nav justify-content-end">
+                            {% for item in characters %}
+                                {%  if item.vocation == 'Elite Knight' or item.vocation == 'Knight'  %}
+                          <li class="nav-item">
+                            <a class="nav-link active rows-characters" href="#">
+                                <div class="rows-characters-inner">
+                                    <span> {{ item.name }} </span>
+                                    <span> {{ item.level }} </span>
+                                </div>
+                            </a>
+                          </li>
+                                {% endif %}
+                            {% endfor %}
+                    </ul>
+{%  endblock %}
+
+{% block paladin %}
+    <h4> Paladins</h4>
+                    <ul class="nav justify-content-end">
+                            {% for item in characters %}
+                                {%  if item.vocation == 'Royal Paladin' or item.vocation == 'Paladin'  %}
+                                      <li class="nav-item">
+                                        <a class="nav-link active rows-characters" href="#">
+                                            <div class="rows-characters-inner">
+                                                <span> {{ item.name }} </span>
+                                                <span> {{ item.level }} </span>
+                                            </div>
+                                        </a>
+                                      </li>
+                                {% endif %}
+                            {% endfor %}
+                    </ul>
+{% endblock %}
+
+{% block druid %}
+    <h4>Druids</h4>
+                    <ul class="nav justify-content-end">
+                            {% for item in characters %}
+                                {%  if item.vocation == 'Elder Druid' or item.vocation == 'Druid'  %}
+                          <li class="nav-item">
+                            <a class="nav-link active rows-characters" href="#">
+                                <div class="rows-characters-inner">
+                                    <span> {{ item.name }} </span>
+                                    <span> {{ item.level }} </span>
+                                </div>
+                            </a>
+                          </li>
+                                {% endif %}
+                            {% endfor %}
+                    </ul>
+{% endblock %}
+
+{% block sorcerer %}
+    <h4> Sorcerers</h4>
+                <ul class="nav justify-content-end">
+                    {% for item in characters %}
+                        {%  if item.vocation == 'Master Sorcerer' or item.vocation == 'Sorcerer'  %}
+                            <li class="nav-item">
+                                <a class="nav-link active rows-characters" href="#">
+                                    <div class="rows-characters-inner">
+                                       <span> {{ item.name }} </span>
+                                       <span> {{ item.level }} </span>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+{% endblock %}
+
+{% block body %}
+<div class="container input-custom-container" style="width: auto">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit" class="btn btn-primary btn-custom" value="Submit">Submit</button>
+    </form>
+    <h2>{{ server_onl_pl.players_online }}</h2>
+    {% if form.is_valid %}
+        <h2>{{ ppl_count }}</h2>
+    {% endif %}
+</div>
+    <br>
+{% endblock %}

@@ -1,0 +1,138 @@
+
+.header {
+    display: block;
+    width: 100%;
+    background-position: center;
+    border-radius: 0px;
+    max-width: 100%;
+
+}
+
+.float {
+    position: absolute;
+    z-index: 2;
+}
+
+.form {
+    margin-left: 145px;
+}
+.box {
+    width: 275px;
+    margin: 65px 0;
+    margin-left: -80px;
+}
+
+
+body {
+    background-color: #d6e1ff;
+}
+
+
+
+.sidebar{
+
+    width: 100%;
+    border-width: 1px;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    min-height: 100%;
+
+
+}
+.sidebar-link:hover {
+    text-decoration: none;
+    color: #dfdfdf;
+    width: 100%;
+}
+
+.right-up {
+    margin:20px;
+}
+#up-down-margin {
+    margin-bottom: 50px;
+    height: 50px;
+}
+.button-custom {
+    background-color: #b7c9ff;
+    color: rgba(33,32,37,0.73);
+    border-radius: 8px;
+    align-content: center;
+
+}
+.button-custom:focus {
+    outline-color: #b7c9ff!important;
+    outline: none;
+}
+.button-custom:active {
+    -webkit-box-shadow: none;
+}
+.button-custom:active:focus {
+    outline: none;
+}
+.tabela-dluga h4 {
+    text-align: center;
+}
+.rows-characters {
+    padding-bottom: 3px!important;
+    padding-top: 3px!important;
+    color: rgba(33,32,37,0.73);
+}
+
+.rows-characters-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.server-buttons-custom-background {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto
+
+}
+.input-box {
+    display: flex;
+    justify-content: center;
+}
+.input-box-inner {
+    display: flex;
+    justify-content: center;
+}
+.btn-custom {
+    margin-left: 4px;
+    background-color: rgba(180,208,255,0.73)!important;
+    background-image: none;
+    outline: none;
+    color: rgba(33,32,37,0.73);
+    height: 35px;
+}
+.btn-custom:hover {
+    color: rgba(76,89,102,0.73);
+}
+.btn-custom:active {
+    outline-color: #b7c9ff!important;
+    outline: none;
+|
+.text-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#id_post {
+    display: grid;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.input-custom-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.form-custom {
+    display: flex;
+    justify-content: center;
+}

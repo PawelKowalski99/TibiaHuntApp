@@ -1,0 +1,91 @@
+{% load bootstrap4 %}
+
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "Tabels/site.css" %}">
+    <title>Page Title</title>
+</head>
+<body>
+    <div class="background">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-9 server-buttons-custom-background" >
+{#           <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">#}
+{#              <div class="btn-group mr-2" role="group" aria-label="First group" style="left:10px; top: 10px;">#}
+                  {% for item in servers %}
+                      <a role="button" href="/{{ item.name }}/" class="btn btn-outline-secondary button-custom ">{{ item.name }}</a>
+                  {% endfor %}
+{#              </div>#}
+            </div>
+
+
+
+            </div>
+
+
+        <div class="col-md-2">
+            <div class="sidebar">
+
+                <div class="sidebar-tile">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="col-md-12 text-and-button">
+            <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                {% block body %}
+                {% endblock %}
+            </div>
+                        <div class="col-md-4"></div>
+
+{#                <div class="input-group input-group-sm mb-3 input-box">#}
+{#                    <form method="POST" class="input-box-inner"> {% csrf_token %}#}
+{#                      <div class="form-group">#}
+{#                        <input id="your_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your level" name="search_int" value="{{ level }}">#}
+{#                      </div>#}
+{#                      <button type="submit" value="OK" class="btn btn-primary btn-custom">Submit</button>#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+            </div>
+            <div class="col-md-3" class="tabela-dluga">
+                {% block knight %}
+                {% endblock %}
+            </div>
+
+
+            <div class="col-md-3" class="tabela-dluga">
+                {% block paladin %}
+                {% endblock %}
+            </div>
+
+            <div class="col-md-3" class="tabela-dluga">
+                {% block druid %}
+                {% endblock %}
+            </div>
+
+            <div class="col-md-3" class="tabela-dluga">
+                {% block sorcerer %}
+                {% endblock %}
+            </div>
+
+        </div>
+
+
+</div>
+
+
+</body>
+</html>
