@@ -8,5 +8,5 @@ class LevelForm(forms.Form):
         super(LevelForm, self).clean()
         level = self.cleaned_data['level']
         if level <= 0:
-            self._errors['level'] = self.error_class(['Must be positive integer'])
+            self._errors['level'] = self.error_class(['Must be positive number'])
         return self.cleaned_data

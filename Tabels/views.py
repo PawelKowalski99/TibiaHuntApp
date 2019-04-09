@@ -6,7 +6,7 @@ from django.views.generic.edit import FormView
 
 
 class IndexView(View):
-    template_name = 'register/grid_layout.html'
+    template_name = 'register/layout.html'
     def get(self, request):
         servers = Servers.objects.all()
         return render(request, self.template_name, context={
